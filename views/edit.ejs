@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Panda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/style.css">  <!-- need a slash in front of style.css for relative paths in order to refer to application root  If you omit the slash, it tries to look at the path relative to the page you are on -->
+</head>
+
+<body>
+    <h1>You're editing a Panda's Information</h1>
+    <form method="POST" action="/pandas/<%= id %>" id="form1">
+        <label class="label">Panda name:</label><input type="text" name="name"><br>
+        <label class="label">Panda age:</label><input type="text" name="age">
+    </form>
+    <button type="submit" form="form1" value="Submit" class="buttons">Edit this panda!</button>
+    <a href="/">
+        <button class="buttons">Back to home</button>
+    </a>
+    </body>
+</html>

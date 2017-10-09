@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add New Panda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+
+<body>
+    <div id="newpanda">
+        <h1>Add a New Panda!</h1>
+        <form method="POST" action="/pandas" id="form1">
+            <label class="label">Panda name:</label><input type="text" name="name"><br>
+            <label class="label">Panda age:</label><input type="text" name="age">
+        </form>
+        <button type="submit" form="form1" value="Submit" class="buttons">Add new panda!</button>
+        <a href="/">
+            <button class="buttons">Back to home</button>
+        </a>
+    </div>
+</body>
+
+</html>

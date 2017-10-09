@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Panda Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="body">
+        <h1>Welcome to Panda Dashboard</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Panda Name</th>
+                    <th>Panda Age</th>
+                    <th>Edit Panda Info</th>
+                    <th>Delete Panda</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var x in pandas) { %>
+                    <tr>
+                        <td>
+                            <%= pandas[x].name %>
+                        </td>
+                        <td>
+                            <%= pandas[x].age %>
+                        </td>
+                        <td><a href="pandas/edit/<%= pandas[x]._id %>">Edit</a></td>
+                        <td><a href="pandas/destroy/<%= pandas[x]._id %>">Delete</a></td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <a href="/pandas/new">
+        <button class="buttons">Add a new Panda!</button>
+        </a>
+    </div>
+</body>
+
+</html>
